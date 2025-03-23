@@ -1,0 +1,31 @@
+.navbar {
+  height: 60px;
+  width: 100%;
+  background: #0f3460;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar {
+    left: 50px;
+    width: calc(100% - 50px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    left: 45px;
+    width: calc(100% - 45px);
+  }
+}

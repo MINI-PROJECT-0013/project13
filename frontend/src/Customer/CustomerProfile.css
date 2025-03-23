@@ -1,0 +1,387 @@
+.navbar {
+  width: 100%;
+  background-color: rgb(6,1,39);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link, .nav-home {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.nav-home {
+  margin-right: 20px;
+}
+
+.nav-link:hover, .nav-home:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(6,1,39);
+  color: rgb(246, 246, 248);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 80px;
+}
+
+.sidebar {
+  width: 350px;
+  background: rgb(242, 241, 241);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 1);
+  color: #0c1057;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+}
+
+.profile-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #001f3f;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.user-emailc {
+  color: #4a4a4a;
+  padding: 5px;
+ margin-top: 100px;
+  font-size: 16px;
+}
+
+.dashboard-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.menu-item {
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  color: #0c1057;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #e0e0e0;
+}
+
+.menu-item.active {
+  background-color: #e0e0e0;
+  color: white;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 30px;
+  max-height: calc(100vh - 120px);
+}
+
+.scrollable-content {
+  overflow-y: auto;
+  max-height: calc(100vh - 150px);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* User Details Section */
+.user-details-section, 
+.service-history-section, 
+.ratings-section, 
+.reviews-section {
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+  color: black;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #001f3f;
+}
+
+.edit-button {
+  background-color: #001f3f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+  background-color:rgb(6,1,39) ;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+}
+
+.detail-label {
+  font-weight: 600;
+  width: 150px;
+  color: #333;
+}
+
+.detail-value {
+  flex-grow: 1;
+  color: #666;
+}
+
+/* Form for editing */
+.edit-form {
+  padding: 10px 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-button, .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-button {
+  background-color:rgb(6,1,39);;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: rgb(6,1,39);
+}
+
+.cancel-button {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Service History Section */
+.service-history-list {
+  display: flex;
+  flex-direction: row;
+  padding-right:10px ;
+  gap: 15px;
+}
+
+.service-card, .rating-card, .review-card {
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+  color: black;
+  margin-bottom: 20px;
+}
+
+.service-card:hover, .rating-card:hover, .review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-header, .rating-header, .review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.service-header h4 {
+  margin: 0;
+  color: #001f3f;
+  font-size: 18px;
+}
+
+.booking-date, .rating-date, .review-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+}
+
+.detail-item .detail-label {
+  width: 100px;
+  font-size: 14px;
+}
+
+.detail-item .detail-value {
+  font-size: 14px;
+}
+
+.no-history, .no-ratings, .no-reviews {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Rating and Review specific styles */
+.average-rating-display {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+}
+
+.star-rating {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.star {
+  color: #ccc;
+  margin: 0 2px;
+}
+
+.star.selected {
+  color: gold;
+}
+
+.customer-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #001f3f;
+}
+
+.review-text {
+  margin: 10px 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Attachments Section */
+.attachments-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.attachments-section h4 {
+  margin-bottom: 15px;
+  color: #001f3f;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #001f3f;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #003366;
+}
+
+.no-files {
+  color: #666;
+  font-style: italic;
+}

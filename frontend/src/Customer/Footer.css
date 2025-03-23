@@ -1,0 +1,25 @@
+.footer {
+    background: #1a1a2e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+  
+  /* Responsive Footer */
+  @media screen and (max-width: 768px) {
+    .footer {
+      left: 50px;
+      width: calc(100% - 50px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .footer {
+      left: 45px;
+      width: calc(100% - 45px);
+    }
+  }

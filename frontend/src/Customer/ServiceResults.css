@@ -1,0 +1,361 @@
+/**
+ * VS Code-inspired styling for ServiceResults component
+ * All styling is contained to the component-specific classes
+ */
+
+/* Main container for the entire layout */
+.vscode-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #d4d4d4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* ===== SIDEBAR STYLING ===== */
+  .vscode-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 48px;
+    background-color: #161616;
+    border-right: 1px solid #303031;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    padding: 8px 0;
+  }
+  
+  .sidebar-top-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .sidebar-bottom {
+    margin-top: auto;
+    margin-bottom: 8px;
+  }
+  
+  .sidebar-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #d4d4d4;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .sidebar-button:hover {
+    background-color: #2a2d2e;
+  }
+  
+  .sidebar-button:active,
+  .sidebar-button.active {
+    background-color: #37373d;
+  }
+  
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .sidebar-button:hover .nav-icon {
+    transform: translateY(-2px);
+  }
+  
+  /* Tooltip styling */
+  .tooltip-container {
+    position: relative;
+  }
+  
+  .tooltip {
+    position: absolute;
+    background-color: #252526;
+    color: #d4d4d4;
+    border: 1px solid #454545;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  
+  .tooltip-right {
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* ===== MAIN CONTENT STYLING ===== */
+  .list-container {
+    margin-left: 48px;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    background-color:#1a1a2e;
+  }
+  
+  .list-container h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #3e3e42;
+    color: #d4d4d4;
+    
+  }
+  
+  /* Professional service card styling */
+  .professionals-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .professional-card {
+    background-color: #252526;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .professional-card:hover {
+    border-color: #007fd4;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .professional-card h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #d4d4d4;
+  }
+  
+  .professional-card p {
+    margin: 6px 0;
+    color: #8b949e;
+  }
+  
+  /* Rating stars styling */
+  .star-rating {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    font-size: 20px;
+    color: #8b949e;
+    cursor: pointer;
+    margin-right: 4px;
+    transition: color 0.2s;
+  }
+  
+  .star:hover, 
+  .star.selected {
+    color: #e3b341;
+  }
+  
+  /* Form elements styling */
+  .comment-textarea,
+  .complaint-textarea {
+    width: 100%;
+    background-color: #1c1c1c;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    color: #d4d4d4;
+    padding: 8px;
+    margin: 8px 0;
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+  }
+  
+  .comment-textarea:focus,
+  .complaint-textarea:focus {
+    outline: none;
+    border-color: #007fd4;
+  }
+  
+  /* Button styling */
+  .card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .action-button {
+    background-color: #0e639c;
+    color: #d4d4d4;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+  }
+  
+  .action-button:hover {
+    background-color: #1177bb;
+  }
+  
+  .action-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .cancel-button {
+    background-color: #a1260d;
+  }
+  
+  .cancel-button:hover {
+    background-color: #b71c1c;
+  }
+  
+  /* Modal styling */
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #252526;
+    border: 1px solid #3e3e42;
+    border-radius: 4px;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 1000;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal h3 {
+    margin-bottom: 16px;
+    font-weight: 500;
+    color: #d4d4d4;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #f48771;
+    padding: 16px;
+    border: 1px solid #f48771;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: rgba(244, 135, 113, 0.1);
+  }
+  
+  /* Loading state styling */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #3e3e42;
+    border-top-color: #0e639c;
+    border-radius: 50%;
+    animation: spin 1s ease-in-out infinite;
+    margin-bottom: 16px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* ===== RESPONSIVE ADJUSTMENTS ===== */
+  @media (max-width: 768px) {
+    .vscode-sidebar {
+      width: 40px;
+    }
+    
+    .sidebar-button {
+      width: 32px;
+      height: 32px;
+    }
+    
+    .nav-icon {
+      width: 16px;
+      height: 16px;
+    }
+    
+    .tooltip {
+      display: none;
+    }
+    
+    .list-container {
+      margin-left: 40px;
+      padding: 16px;
+    }
+    
+    .professional-card {
+      padding: 12px;
+    }
+    
+    .modal {
+      width: 95%;
+      padding: 16px;
+    }
+    
+    h2 {
+      font-size: 20px;
+    }
+    
+    .card-actions {
+      flex-direction: column;
+    }
+    
+    .action-button {
+      width: 100%;
+    }
+  }
+  
+  /* For larger screens */
+  @media (min-width: 1200px) {
+    .list-container {
+      max-width: 1200px;
+      margin-left: calc(48px + 50px);
+      margin-right: 50px;
+    }
+  }

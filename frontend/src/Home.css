@@ -1,0 +1,250 @@
+/* Base Styles with Motion Enhancements */
+
+.App {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  max-width: 2000px;
+  overflow-x: hidden;
+  
+  padding-bottom: 50px;
+}
+
+/* Navigation Bar with Smooth Transitions */
+.Bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  top: 10px;
+  height: 100px;
+  background-color: rgb(1, 1, 38);
+  transition: all 0.3s ease;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-button, .about-button, .nav-button1 {
+  background-color: white;
+  color: rgba(6,1,39,1);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  height: 30px;
+  margin-left: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+.offerButton{
+  background-color: lightgray;
+}
+.contact-button:hover, .about-button:hover {
+  background-color: rgba(6,1,39,1);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Hero Section with Fade-in Animation */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 400px;
+  color: white;
+  margin-top: 0px;
+  position: relative;
+  animation: fadeIn 1s ease-out;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.hero-content{
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.hero-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.picture:hover {
+  opacity: 0.7;
+}
+
+/* Services Section with Staggered Animations */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: cardEntrance 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.service-card .size{
+  width: 80px;
+  height:auto;
+}
+
+@keyframes cardEntrance {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* About Section with Smooth Modal Animation */
+/* About Section Positioned at Bottom */
+.about-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;  /* Center it and give space */
+  text-align: center;
+}
+
+/* Ensures smooth scrolling behavior */
+
+
+@keyframes modalSlide {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -30%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Responsive Adjustments with Motion Considerations */
+@media (max-width: 768px) {
+  .Bar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .service-card {
+    animation: mobileCardEntrance 0.4s ease-out forwards;
+  }
+
+  @keyframes mobileCardEntrance {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .about-container {
+    animation: mobileModalSlide 0.4s ease-out;
+  }
+
+  @keyframes mobileModalSlide {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -40%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Enhanced Button Interactions */
+.b {
+  background-color: rgba(6,1,39,1);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+.support-section {
+  background-color: white;
+  padding: 50px;
+  margin-top: 20px;
+}
+
+/* Worker Duties Section */
+
+
+
+
+
+.b:hover {
+  background-color: black;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
